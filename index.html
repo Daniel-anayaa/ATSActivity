@@ -6,9 +6,25 @@
     <link rel="stylesheet" href="styles.css">
     <title>Discovering the World</title>
 </head>
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Edit Card</h2>
+        <form>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" value="">
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea>
+
+            <button type="submit" class="save-button">Save Changes</button>
+        </form>
+    </div>
+</div>
+
 <body>
     <header>
-        <h1>[Making Your Life Easier] </h1>
+        <h1>[Making Your Life Easier]</h1>
         <h2>Discovering the World</h2>
         <nav class="categories">
             <button>All</button>
@@ -19,38 +35,68 @@
             <button>Work</button>
         </nav>
     </header>   
-    <main class="TravelLife">
+
+    <main class="articles">
+        <!-- Tarjetas de la primera fila -->
         <article class="card">
             <img src="images/Ice1.jpg" alt="Ice Time">
             <div class="content">
                 <h2>The waves are high & beautiful</h2>
                 <p>Ices are melting. Protect Earth!</p>
+                <div class="card-buttons">
+                    <button class="edit-button">Edit</button>
+                    <button class="delete-button">Delete</button>
+                </div>
             </div>
         </article>
         <article class="card">
             <img src="images/beach.jpg" alt="Relaxing Beach">
             <div class="content">
-                <h2>At the beach in winter</h2>
-                <p>The best beach in the whole world come and visit us</p>
+                <h2>Good beaches!</h2>
+                <p>Find the best beaches in the whole world come and visit us</p>
+                <div class="card-buttons">
+                    <button class="edit-button">Edit</button>
+                    <button class="delete-button">Delete</button>
+                </div>
             </div>
         </article>
+
+        <!-- Tarjetas de la segunda fila -->
+        <article class="card">
+            <img src="images/Business.jpg" alt="Business">
+            <div class="content">
+                <h2>Do Business</h2>
+                <p>Find the best partners for your business</p>
+                <div class="card-buttons">
+                    <button class="edit-button">Edit</button>
+                    <button class="delete-button">Delete</button>
+                </div>
+            </div>
+        </article>
+        <article class="card">
+            <img src="images/Food1.jpg" alt="Delicious Food">
+            <div class="content">
+                <h2>Delicious Food</h2>
+                <p>Come and enjoy the best food in town!</p>
+                <div class="card-buttons">
+                    <button class="edit-button">Edit</button>
+                    <button class="delete-button">Delete</button>
+                </div>
+            </div>
+        </article>
+        <!-- Tarjeta de la tercera fila -->
+        <article class="card">
+            <img src="images/Work.jpg" alt="Working office">
+            <div class="content">
+                <h2>Work Hard!</h2>
+                <p>Always work hard but with moderation!</p>
+                <div class="card-buttons">
+                    <button class="edit-button">Edit</button>
+                    <button class="delete-button">Delete</button>
+                </div>
+            </div>
+        </article>
+
     </main>
-    <main class ="BusinessFood">
-      <article class="BsFd">
-        <img src="images/Business.jpg" alt="Business">
-        <div class="content">
-            <h3>Do Business</h3>
-            <p>Found the best guys for business</p>
-        </div>
-    </article>
-    <article class="BusinessFood">
-        <img src="images/Food1.jpg" alt="Food">
-        <div class="content">
-            <h3>Eat delicious food</h3>
-            <p>Find the best food in town</p>
-        </div>
-    </article>
-    </main>
-    
 </body>
 </html>
