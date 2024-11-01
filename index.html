@@ -5,24 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Discovering the World</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<div id="editModal" class="modal">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h2>Edit Card</h2>
-        <form>
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title" value="">
-
-            <label for="description">Description:</label>
-            <textarea id="description" name="description"></textarea>
-
-            <button type="submit" class="save-button">Save Changes</button>
-        </form>
-    </div>
-</div>
 
 <body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <header>
         <h1>[Making Your Life Easier]</h1>
         <h2>Discovering the World</h2>
@@ -43,10 +32,12 @@
             <div class="content">
                 <h2>The waves are high & beautiful</h2>
                 <p>Ices are melting. Protect Earth!</p>
-                <div class="card-buttons">
-                    <button class="edit-button">Edit</button>
-                    <button class="delete-button">Delete</button>
-                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
+                    Editar
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Eliminar
+                </button>
             </div>
         </article>
         <article class="card">
@@ -54,10 +45,12 @@
             <div class="content">
                 <h2>Good beaches!</h2>
                 <p>Find the best beaches in the whole world come and visit us</p>
-                <div class="card-buttons">
-                    <button class="edit-button">Edit</button>
-                    <button class="delete-button">Delete</button>
-                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
+                    Editar
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Eliminar
+                </button>
             </div>
         </article>
 
@@ -67,10 +60,12 @@
             <div class="content">
                 <h2>Do Business</h2>
                 <p>Find the best partners for your business</p>
-                <div class="card-buttons">
-                    <button class="edit-button">Edit</button>
-                    <button class="delete-button">Delete</button>
-                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
+                    Editar
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Eliminar
+                </button>
             </div>
         </article>
         <article class="card">
@@ -78,10 +73,12 @@
             <div class="content">
                 <h2>Delicious Food</h2>
                 <p>Come and enjoy the best food in town!</p>
-                <div class="card-buttons">
-                    <button class="edit-button">Edit</button>
-                    <button class="delete-button">Delete</button>
-                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
+                    Editar
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Eliminar
+                </button>
             </div>
         </article>
         <!-- Tarjeta de la tercera fila -->
@@ -90,13 +87,48 @@
             <div class="content">
                 <h2>Work Hard!</h2>
                 <p>Always work hard but with moderation!</p>
-                <div class="card-buttons">
-                    <button class="edit-button">Edit</button>
-                    <button class="delete-button">Delete</button>
-                </div>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
+                    Editar
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Eliminar
+                </button>
             </div>
         </article>
 
     </main>
 </body>
+
+<!-- Modal Forms para las postales-->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Editar Postal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Formulario de edición -->
+                <form>
+                    <div class="form-group">
+                        <label for="postTitle">Título</label>
+                        <input type="text" class="form-control" id="postTitle" placeholder="Ingrese el título">
+                    </div>
+                    <div class="form-group">
+                        <label for="postDescription">Descripción</label>
+                        <textarea class="form-control" id="postDescription" rows="3" placeholder="Ingrese la descripción"></textarea>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </html>
