@@ -1,3 +1,4 @@
+<!--Inicialización, definir todo el head y agregar link de bootstrap-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +10,12 @@
 </head>
 
 <body>
+    <!-- Agregar bootstrap para uso de JavaScript-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Definir los headers y los botones de navegación-->
     <header>
         <h1>[Making Your Life Easier]</h1>
         <h2>Discovering the World</h2>
@@ -99,7 +103,7 @@
     </main>
 </body>
 
-<!-- Modal Forms para las postales-->
+<!-- Modal Forms para las tarjetas-->
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -110,7 +114,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Formulario de edición -->
+                <!-- Formulario de edición (Modal Bootstrap) -->
                 <form>
                     <div class="form-group">
                         <label for="postTitle">Título</label>
@@ -118,11 +122,12 @@
                     </div>
                     <div class="form-group">
                         <label for="postDescription">Descripción</label>
-                        <textarea class="form-control" id="postDescription" rows="3" placeholder="Ingrese la descripción"></textarea>
+                        <input class="form-control" id="postDescription" placeholder="Ingrese la descripción"></input>
                     </div>
 
                 </form>
             </div>
+             <!-- Botones dentro del popup(Modal Bootstrap) -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                 <button type="button" class="btn btn-primary">Guardar Cambios</button>
